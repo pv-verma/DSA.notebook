@@ -25,10 +25,27 @@ int Sqrt(int n) {
     return ans; // Return the floor value of the square root
 }
 
+double morePrecision(int n, int precision, int tempSol) {
+    
+    double factor = 1;
+    double ans = tempSol;
+
+    for (int i = 0; i < precision; i++) {
+        factor /= 10;
+        for (double j = ans; j * j < n; j += factor) {
+            ans = j;
+        }
+    }
+    return ans;
+}
+
 int main() {
     int n;
     cout << "Enter a number: ";
     cin >> n;
-    cout << "Square root of " << n << " is " << Sqrt(n) << endl;
+
+    int tempSol = Sqrt(n);
+
+    cout << "Square root of " << n << " is : " << morePrecision(n, 3, tempSol) << endl;
     return 0;
 }
