@@ -18,8 +18,8 @@ int findMin(int arr[], int n) {
 }
 
 int main() {
-    int arr[] = {3, 4, 5, 1, 2};
-    int n = 5;
-    cout << "Minimum: " << findMin(arr, n) << endl;
+    int arr[5] = {3, 4, 5, 1, 2};
+    
+    cout << "Minimum: " << findMin(arr, 5) << endl;
     return 0;
 }

@@ -4,36 +4,36 @@ using namespace std;
 //search in rotated sorted array
 
 int search(int arr[], int n, int target) {
-    int left = 0, right = n - 1;
+    int start = 0, end = n - 1;
 
-    while (left <= right) {
-        int mid = left + (right - left) / 2;
+    while (start <= end) {
+        int mid = start + (end - start) / 2;
 
         if (arr[mid] == target)
             return mid;
 
         // left half is sorted
-        if (arr[left] <= arr[mid]) {
-            if (target >= arr[left] && target < arr[mid])
-                right = mid - 1;
+        if (arr[start] <= arr[mid]) {
+            if (target >= arr[start] && target < arr[mid])
+                end = mid - 1;
             else
-                left = mid + 1;
+                start = mid + 1;
         }
         // right half is sorted
         else {
-            if (target > arr[mid] && target <= arr[right])
-                left = mid + 1;
+            if (target > arr[mid] && target <= arr[end])
+                start = mid + 1;
             else
-                right = mid - 1;
+                end = mid - 1;
         }
     }
     return -1;
 }
 
 int main() {
-    int arr[] = {4, 5, 6, 7, 0, 1, 2};
-    int n = 7;
+    int arr[7] = {4, 5, 6, 7, 0, 1, 2};
+    
     int target = 0;
-    cout << "Index: " << search(arr, n, target) << endl;
+    cout << "Index: " << search(arr, 7, target) << endl;
     return 0;
 }
