@@ -1,11 +1,11 @@
 #include <iostream>
 using namespace std;
 
-// square root using binary search (floor value )
+// square root using binary search (floor value)
 
 int Sqrt(int n) {
     int s = 0, e = n;
-    long long int ans = -1;      // Use long long to avoid overflow
+    long long int ans = -1;     // Use long long to avoid overflow
 
     while (s <= e) {
         long long int mid = s + (e - s) / 2;
