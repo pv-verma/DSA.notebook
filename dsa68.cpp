@@ -22,6 +22,8 @@ int main() {
     }
     cout<<endl;
 
+    cout <<"empty or not "<< s.empty()<<endl;;
+
     cout<<"after pop"<<endl;
     while (!s.empty()){
         cout<<s.top()<<" ";
