@@ -1,6 +1,9 @@
 #include<string>
 #include<iostream>
 using namespace std;
+
+// replace spaces with preffered string
+ 
 string replaceSpaces(string &str){
 	string temp = "";
     
