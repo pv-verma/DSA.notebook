@@ -20,8 +20,11 @@ void replaceSpaces(string &s, string &replacement) {
 
 int main() {
     string s;
+    cout << "Enter a string: ";
     getline(cin, s);
-    string replacement = "@40";
+    string replacement;
+    cout << "Enter the replacement string: ";
+    cin >> replacement;
     replaceSpaces(s, replacement);
     cout << s << endl;
     return 0;
